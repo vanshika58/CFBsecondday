@@ -1,0 +1,23 @@
+from operator import truediv
+
+
+a=3
+b=4
+#arthimatic operators
+print("value of a+b is ", a+b)
+print("value of a-b is ", a-b)
+print("value of a*b is ", a*b)
+print("value of a/b is ", a/b)
+#assignent operators
+c=a+2
+print("new value of a is", c )
+#comparision operator
+c= (a>=b)
+print(c)
+
+#logical operators
+bool1= True
+bool2= False
+print("bool1 AND bool2 is eual to",(bool1 and bool2))
+print("bool1 OR bool2 is eual to",(bool1 or bool2))
+print("bool1 NOT bool2 is eual to",( not bool2))
