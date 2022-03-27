@@ -1,3 +1,4 @@
+     CODE-1
 from operator import truediv
 
 
@@ -21,3 +22,21 @@ bool2= False
 print("bool1 AND bool2 is eual to",(bool1 and bool2))
 print("bool1 OR bool2 is eual to",(bool1 or bool2))
 print("bool1 NOT bool2 is eual to",( not bool2))
+
+          CODE-2
+#typecasting
+
+a = "3534"
+print(type(a))
+a= int(a) 
+print(a+5)
+print(type(a))
+             
+             CODE-3
+
+#input function
+ 
+a = input("enter your name: ")
+a= int(a) # for taking input as a string
+print(a)
+print(type(a))
