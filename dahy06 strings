@@ -1,0 +1,33 @@
+#average of two numbers
+
+a= input("enter  first number")
+a=int(a)
+b= input("enter  second number")
+b=int(b)
+avg= (a+b)/2
+print("average of a and b is",avg) 
+
+
+#concatinating two string
+
+greting= "welcome In CFB"
+b= "hey,"
+print(b + greting) 
+
+
+#string slicing
+b= "CFB"
+print(b[0:2])
+
+
+#negative indexing
+
+b= "PRoject"
+c= (b[-6:-1])
+print(c)
+
+
+#skip slicing
+f= "PROJECT"
+e= (f[1:5:2])
+print(e)
