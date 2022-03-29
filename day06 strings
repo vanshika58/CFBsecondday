@@ -1,0 +1,43 @@
+from ctypes import LittleEndianStructure
+from os import name
+
+
+story = "ther is a online  internship  going on named as CFB"
+
+
+#string functions
+print(len(story))
+
+print(story.endswith("FB"))
+
+print(story.count("a"))
+
+print(story.capitalize())
+
+print(story.find("is"))
+
+print(story.replace("going", "running"))
+ 
+ 
+ #escape Sequence characters
+story = "ther is a online  internship \ngoing on named as CFB"
+print(story)
+
+
+#question of input function
+name= input("enter your team name")
+print("welcome in our team named as" + name)
+
+
+#program to fill in a template space
+letter =  "dere <|NAME|>, \nyou are selected for internship\n date :<|DATE|> "
+name = input("enter your name")
+date=input("enter todays date")
+letter=letter.replace("<|NAME|>",name) 
+letter=letter.replace("<|DATE|>",date)
+print(letter) 
+
+
+#program to detect double spaces
+doublespaces =story.find("  ")
+print(doublespaces)   #indexes at which double spaces are present get printed
