@@ -1,0 +1,38 @@
+#creating a dictionary
+myDict={
+"fast":"in a quick manner",
+"CFB":"a team",
+"marks" :[1,2,3]
+}
+#printing meaning of  a word from dictionary
+print(myDict['fast'])
+print(myDict['marks'])
+
+
+#nasted ditcionary
+myDict={
+"fast":"in a quick manner",
+"CFB":"a team",
+"marks" :[1,2,3],
+"anotherDICT" : {
+"fast":"in a quick way",
+"CFB":"an organisation",
+}
+}
+print(myDict['fast'])
+print(myDict['anotherDICT']['fast'])
+print(myDict["anotherDICT"])
+#to change vale of colum
+myDict["marks"]=[12,17,11]
+print(myDict["marks"])
+
+#ditionary methods
+print(myDict.keys())
+print(myDict.values())
+print(myDict.items())
+updateDict ={
+    "lavish":"friend"
+}
+myDict.update("updateDict")
+print("myDict")
+print(myDict.get("CFB2"))
