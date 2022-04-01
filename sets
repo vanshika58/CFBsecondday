@@ -1,0 +1,57 @@
+#sets
+#creating a set 
+a={1,2,3,4,5}
+a.add(7)
+print(a)
+print(type(a))
+#creating an empty set
+b=set()
+print(type(b))
+#set methods
+b.add(8)
+print(b)
+print(len(b))
+a.remove(3)
+print(a)
+print(a.pop())
+print(a)
+print(a.clear())
+print(a)
+
+#creatin a hindi ditionary with english transiction on which user can lookup
+myDict={
+    "pankha":"fan",
+    "kalam":"pen",
+    "kapdha":"cloths"
+}
+print("options are", myDict.keys())
+a=input("enter the hindi word\n")
+print("the meaning of your word is:", myDict.get())
+
+#program to print all unique numbers and take these numbers from user
+num1=int(input("enter number 1\n"))
+num2=int(input("enter number 2\n"))
+num3=int(input("enter number 3\n"))
+num4=int(input("enter number 4\n"))
+num5=int(input("enter number 5\n"))
+num6=int(input("enter number 6\n"))
+num7=int(input("enter number 7\n"))
+num8=int(input("enter number 8\n"))
+s={num1,num2,num3,num4,num5,num6,num7,num8}
+print(s)
+
+#make a sting to take a number both as int and string
+s={17,"17"}
+print(s)
+
+#create a dictionary which gives user a choice to enter value(favourite language)with respect of keys(name)
+FAVlanguage={}
+a=input("enter your favourite language priya\n")
+b=input("enter your favourite language ankit\n")
+c=input("enter your favourite language ashutosh\n")
+d=input("enter your favourite language sonali\n")
+FAVlanguage["priya"]=a
+FAVlanguage["ankit"]=b
+FAVlanguage["ashutosh"]=c
+FAVlanguage["sonali"]=d
+print(FAVlanguage)
