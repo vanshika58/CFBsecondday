@@ -1,0 +1,51 @@
+  #if-elif ladder
+a = 45
+if(a>3):
+ print("the value of a is greater than 3")
+elif(a>7):
+ print("the value of a is greater than 7")
+else:
+ print("the value of a is not greater than 3 or 7")
+
+#continous if conditions
+a = 45
+
+if(a>3):
+    print("the value of a is greater than 3")
+
+if(a>7):
+    print("the value of a is greater than 7")
+
+else:
+    print("the value of a is not greater than 3 or 7")
+
+    #if age intere by user is greater or not
+a=int(input("enter your age")) #because greater than  does not suported by string
+
+if a>18:
+    print("greater")
+else:
+    print("less")
+
+#AND operator
+age=34
+if(age>23 and age<45):
+     print("you can work with us")
+else:
+    print("you cant work with us ")
+ 
+ #OR operator
+age=int(input("enter your age"))
+if(age>23 or age<45):
+     print("you can work with us")
+else:
+    print("you cant work with us ")
+    #is
+a=None
+if(a is None):
+    print("yes")
+else:
+    print("no")
+    #in
+a=[45,56,7,8]
+print(45 in a)
