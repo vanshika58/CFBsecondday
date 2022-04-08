@@ -1,0 +1,37 @@
+#program to find greatest of three numbers
+def greatest(num1,num2,num3):
+    if(num1>num2):
+        if(num1>num3):
+            return num1
+        else:
+            return num3
+    else:
+        if(num2>num3):
+            return num2
+        else:
+            return num3
+n=greatest(12,5,16)
+print("the value of maximum is "+ str(n))
+#program to convert from calcious to faranhite
+def farh(cel):
+    return (cel*(9/5)) + 32 
+c=int(input("enter your number"))
+f= farh(c)
+print("fahrenit temperature is " + str(f))
+#sum of n natural numbers
+def sumnaturalnumber(n):
+  return (n*(n+1)*2)
+num=int(input("enter your number"))
+sum=sumnaturalnumber(num)
+print("sum of n natural number is " + str(sum))
+#program to print star pattern 
+n=3
+for i in range(n):
+   print("*"* (n-i)) #it print * n-1 times
+#remove given words from a list and strip it at same time
+def remove_and_split(string,word):
+    newstr = string.replace(word,"")
+    return newstr.strip()
+this= "     CFB is a team       "
+n=remove_and_split(this,"CFB")
+print(n)
