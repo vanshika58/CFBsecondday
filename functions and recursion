@@ -1,0 +1,52 @@
+#normal way
+marks=[45,78,86,77]
+percentage= (sum(marks)/400)*100
+marks2=[35,73,85,77]
+percentage2= (sum(marks2)/400)*100
+print(percentage,percentage2)
+#functions
+#creating a function
+def percent(marks):
+    return  (sum(marks)/400)*100
+
+marks1=[45,78,86,77]
+percentage= percent(marks1)
+marks2=[35,73,85,77]
+percentage2= percent(marks2)
+print(percentage,percentage2)
+
+#function for greeting
+def greet(name):
+    print("good day " + name)
+name=input("enter your name:")
+greet(name)
+# sum  function in python
+def mysum(num1,num2):
+    return num1+num2
+num1= int(input("enter your first number"))
+num2= int(input("enter your second number"))
+sum= mysum(num1, num2)
+print(sum)
+#Default argument
+def greet(name= "stranger"):
+    print("good day " + name)
+greet("rohan")
+greet() #when we do not give any value then default argument it in this case stranger works
+
+#Recursion in python
+#code to calculate factorial
+def factorial_iter(n):
+    product = 1
+    for i in  range(n):
+        product = product * (i+1)
+    return product
+#print(factorial_iter(5)) 
+
+#recursive factorial
+def factorial_recursive(n):
+    if n==1 or n ==0:
+        return 1 
+    return n* factorial_iter(n-1)
+num= int(input("enter your number"))
+f=factorial_recursive(num)
+print(f)
