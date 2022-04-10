@@ -1,0 +1,25 @@
+#opening a file
+f= open('py 02 code.py','r')
+data= f.read()
+print(data)
+#closing a file
+f.close()
+#readline function
+f= open('py 02 code.py','r')
+data= f.readline()
+print(data)
+f.close()
+#write a file in python 
+f= open('another.txt','w')
+f.write("please add this to the file it is using for learning write in file method")
+f.close()
+#if we open above "another.txt"file in apend mode
+f=open('another.txt','a')
+f.write(" i'm  appending")
+f.close()
+#with function 
+with open('another.txt','r') as f:
+    a= f.read()
+with open('another.txt','w') as f: #for writing something in a file 
+    a= f.write('write')
+print(a)
