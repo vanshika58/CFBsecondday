@@ -1,0 +1,44 @@
+#program to read a file and identifie a special word
+f= open('another.txt','r')
+t=f.read()
+a= input("enter word to search ")
+if a in t:
+    print("yes " + a + " is present in this file ")
+else:
+    print( a+ " is not present in this file")
+f.close()
+#game function which allow a user to play a game and return score as an integer create a file which is empty or story previous highest score and update if that score is crosed/breaked
+def game():
+    return 39
+score= game()
+with open("hiscore.txt") as f:
+    hiScorestr = f.read()
+if hiScorestr=='':
+       with open("hiscore.txt", "w") as f:
+        f.write(str(score))
+elif int(hiScorestr)<score:
+    with open("hiscore.txt", "w") as f:
+        f.write(str(score))
+#create table from 2-20 and write them in different files
+for i in range(2,21):
+    with open(f"multiplication_table_of_{i}",'w') as f:
+        for j in range(1,11):
+            f.write(f"{i}x{j}={i*j}\n")
+        break #if we remove this break all file with table from 2-20 generated
+
+#code to identifie a word and change it
+with open("another.txt") as f:
+    content = f.read()
+content= content.replace("donkey","$%^@$^#")
+with open("another.txt","w") as f:
+    f.write(content)
+#write a program to make coy of a file
+with open('this.txt','r')as f:
+   content= f.read()
+
+with open("copy.txt",'w') as f:
+    f.write(content)
+
+#program to wipe out content of a file 
+with open("this.txt",'w')as f:
+   f.write("")
