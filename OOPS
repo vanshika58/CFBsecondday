@@ -1,0 +1,72 @@
+#OOPS
+#normal way to add two numbers
+a= 12 
+b=34
+print("the sum of a and b is ", a+b)
+
+#adding two numbers with help of OOPs
+class Number:
+    def sum(self):
+        return self.a + self.b
+num=Number()
+num.a=12
+num.b=17
+s=num.sum()
+print(s)
+
+#railway forms 
+class RailwayForm:
+   formType= "RailwayForm" #form name
+   def printData(self): #creating function 
+    print(f"Name is {self.name}")         #methods/variable
+    print(f"Train is {self.train}")  #f functin is used , so that we can add variables
+harrysApplication =RailwayForm() #objeact 
+harrysApplication.name="Harry"      #characteristics
+harrysApplication.train="rewanchal"
+harrysApplication.printData()
+
+#creating game using class
+class remote:
+  pass
+class player:
+    def moveRight(self):
+      pass
+    def moveleft(self):
+      pass
+    def moveTop(self):
+      pass
+remote1=remote()
+player1=player()
+if(remote1.isleftPressed()):#this code is incomplete because it is only a example of how to maintain class and obj
+  player1.moveleft()   
+
+#class attributes
+class employes:
+      company= "Google"
+priya = employes()
+print(priya.company)
+employes.company= "youtube" #here we replace google by youtube
+rohan= employes()
+print(rohan.company)
+
+#instance attribute
+class employes:
+      company= "Google"
+      salary=10000 #class attribute of salary
+priya = employes()
+rohan= employes()
+priya.salary= 30000 #instance attribute of salary
+rohan.salary= 40000  
+print(priya.company)
+print(priya.salary) 
+print(rohan.company)
+print(rohan.salary) 
+
+#self
+class Employee:
+  company="amazon"
+  def getsalary(self):
+      print(f"salary for this employee working in {self.company} is {self.salary}") #on which ever object we are running that object thats salary attribute is get printed
+harry = Employee()
+harry.salary= 200000
+harry.getsalary() #Employee.getsalary(harry)
