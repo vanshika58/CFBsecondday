@@ -1,0 +1,35 @@
+#extra argument
+class Employee:
+  company="amazon"
+  def getsalary(self,signature):
+      print(f"salary for this employee working in {self.company} is {self.salary}\n{signature}") #on which ever object we are running that object thats salary attribute is get printed
+
+#@staticmethod
+  @staticmethod
+  def greet():
+      print("hello!good morning")
+harry = Employee()
+harry.salary= 200000
+harry.getsalary("thanks") #Employee.getsalary(harry)
+harry.greet()
+
+#__int__constructor
+class Employee:
+  company="amazon"
+  def __init__(self, name,salary,sub_unit):#init is a function which runs automaatically without calling , name salary and sub_units are three parameters which have to pass else program throw error
+    self.name=name
+    self.salary=salary
+    self.sub_unit=sub_unit 
+    print("employe is created")
+  def getdetails(self):
+     print(f"the name of the employe is{self.name}")
+     print(f"the salary of the employe is{self.salary}")
+     print(f"the sub_unit of the employe is{self.sub_unit}")
+  def getsalary(self,signature):
+      print(f"salary for this employee working in {self.company} is {self.salary}\n{signature}") #on which ever object we are running that object thats salary attribute is get printed
+#@staticmethod
+  @staticmethod
+  def greet():
+      print("hello!good morning")
+harry= Employee("herry",100, "youtube")
+harry.getdetails()
