@@ -1,0 +1,68 @@
+#create a class to store some informations
+class programmer:
+    company="Microsoft"
+    def __init__(self,name,product ):
+        self.name= name
+        self.product= product
+    def getinfo(self):
+        print(f"the name of the programmer is {self.name} and the product is {self.product}")
+
+harry = programmer("Harry", "skype")
+harry.getinfo()
+priya = programmer("priya", "github")
+priya.getinfo()'''
+#make a class to form calculator to find square , cube, squareroot
+class Calculator:
+    def __init__(self, num):
+        self.number= num
+    def square(self):
+        print(f"the value of {self.number}square is{self.number**2}")#in python "**2" is a special operator used for doing square of a number
+    def squareRoot(self):
+        pass
+    def cube(self):
+        pass
+a= Calculator(3)
+a.square()
+a.squareRoot()
+a.cube()
+
+#create class and ,set object using class directly
+class sample:
+    a="harry"
+obj = sample()
+obj.a= "vikky" # here we set instance attribute but it v=can't change class attribute ,here a new instance object is created
+#sample.a= "vikky" #for changing attribute of class to 
+print(sample.a)
+print(obj.a)
+
+#railway ticket boking 
+class train:
+    def __init__(self, name,fare,seats):
+        self.name= name
+        self.fare= fare
+        self.seats= seats
+    def getStatus(self):
+        print(f"the name of the train is{self.name}")
+        print(f"the seats avilable in this train is{self.seats}")
+    def fareinfo(self):
+        print(f"the fare info of this train is {self.fare}")
+    def bookticket(self):
+        if(self.seats> 0):
+            print(f"your ticket is booked and your seat number is {self.seats}")
+            self.seats= self.seats-1
+        else:
+            print("this train is full")
+        #def cancleTicket(self,seatNo):
+            #pass
+intercity= train("intercity express: 14015",90,100)
+intercity.getStatus()
+intercity.fareinfo()
+intercity.bookticket()
+intercity.getStatus()
+
+#can we replace self keyword or not
+class sample:
+    def __init__(harry,name): #yes self can replaced by any other word because it is also a parameter but it can confuse other programers working on your code
+        harry.name= name
+obj= sample("harry")
+print(obj.name)
