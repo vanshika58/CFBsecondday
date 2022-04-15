@@ -1,0 +1,30 @@
+#inheritance(single)
+class Employee:
+    company= "Google"
+    def showDetails(self):
+        print("this is an employee")
+class programmer(Employee):
+    language= "python"
+    def getlanguage(self):
+        print(f"the language is{self.language}")
+e=Employee()
+e.showDetails()
+p=programmer()
+p.showDetails()
+print(p.company)
+
+#multiple inheritance
+class Employee:
+    company="visa"
+    ecode= 120
+class freelancer:
+    company="fiver"
+    level= 0
+    def ubGradeLevel(self):
+        self.level= self.level+1
+class programmer(Employee, freelancer):#methods of both employe and freelancer comes in it
+    name="rohan"
+p=programmer()
+p.ubGradeLevel()
+print(p.level)
+print(p.company)#it print visa as company name because we put "employe(name of first class)"" in our" programer" class first so our program gives priority to "employee" class
