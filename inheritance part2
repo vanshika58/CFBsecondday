@@ -1,0 +1,46 @@
+#Multilevel inheritance
+class person:
+    country = "India"
+    def __init__(self):
+        print("to show use of constructor in inharitance\n")
+    def TakeBreath (self):
+        print("i am breathing")
+class Employe:
+    company= "Honda"
+    def __init__(self):
+        super().__init__()
+        print("to show use of constructor in inharitance, it runs constructor of its supper class too ")
+    def getsallary(self):
+        print(f"sallary is {self.sallary}")
+    def TakeBreath (self):
+          print("i'm a Employeso i am breathing ")
+class programmer(Employe):
+    company="google"
+    def getsallary(self):
+        print(f"no salary to programers")
+    def TakeBreath (self):
+        super().TakeBreath() #now it runs "TakeBreath"function of its supperclass 
+        print("i am breathing python")
+p= person()
+p.TakeBreath()
+e=Employe()
+e.TakeBreath()
+e.__init__()
+print(e.company)
+pr=programmer()
+pr.TakeBreath() # it print code of "getsallary" function from "Employe" class because "programmer" class inherit from "Employe" class
+
+#Classmethod
+class Employee:
+    company= " mivi"
+    salary= 10000
+    locaion="delhi"
+    @classmethod #"clasmethod" is a attribute which take a function and change it
+    def changesalary(cls,sal): #it makes an instance attribute names as "sal"and then sal is equal to self.salary, it doesn't change salary attribute
+       cls.salary= sal #cls is reference of class
+       #self.__class__.salary= sal  #to change class attribue
+e= Employee()
+print(e.salary)
+e.changesalary(20000)
+print(e.salary)
+print(Employee.salary) #it show initial service because our e.salary changes (it.sal)not employee.salary
