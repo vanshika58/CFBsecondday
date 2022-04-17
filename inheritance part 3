@@ -1,0 +1,62 @@
+#property decorator
+class Employee:
+    company= "Bharat gas"
+    salary = 5600
+    salarybonus= 566
+    @property # it makke salaryb a function and run it internally 
+    def totalSAlary(self):
+        return self.salary + self.salarybonus
+e= Employee()
+print(e.totalSAlary)
+
+#geater/seater
+class Employee:
+    company= "Bharat gas"
+    salary = 5600
+    salarybonus= 566
+    @property # it makke salaryb a function and run it internally 
+    def totalSalary(self):
+        return self.salary + self.salarybonus
+    @totalSalary.setter  #setter decorator it set values as needed 
+    def totalSalary(self,val):
+        self.salarybonus=val- self.salary
+e= Employee()
+print(e.totalSalary)
+e.totalSalary= 5800
+print(e.salary)
+print(e.salarybonus)
+
+#operator overloading in python
+class number:
+    def __init__(self,num) :
+        self.num= num 
+    def __add__(self,num2): #dender add , it is add method it defines how to add numbers
+        print("lets add")
+        return self.num + num2.num
+    def __mul__(self,num2): #dender mul, it is multiplie method it defines how two numbers are multiplied , to use * operator we have to use mul method
+        print("lets multiplie")
+        return self.num * num2.num
+n1= number(4)  
+n2= number(9)  
+sum= n1 + n2
+print(sum)
+mul= n1* n2
+print(mul)
+
+ #other dender methods
+class number:
+    def __init__(self,num) :
+        self.num= num 
+    def __add__(self,num2): #dender add , it is add method it defines how to add numbers
+        print("lets add")
+        return self.num + num2.num
+    def __mul__(self,num2): #dender mul, it is multiplie method it defines how two numbers are multiplied , to use * operator we have to use mul method
+        print("lets multiplie")
+        return self.num * num2.num
+    def __str__(self): #it is executed when object is directly printed
+        return(f"decimal number: {self.num}")
+    def __len__(self): # len function is used to return length of a number
+        return 1
+n=number(9)
+print(n) 
+print(len(n))
