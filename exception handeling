@@ -1,0 +1,56 @@
+#try
+while(True):
+  print("press q to quit ")
+  a=input("enter a number")
+  if a=='q':
+    break
+  try:
+      print("trying...")
+      a=int(a)
+      if a>6:
+        print("you entered a number greater than 6  ")
+  except Exception as e:     #because of it this shows error not our program not get killed only that iteration got killed, our program runs continuouslt it only show a error
+       print(e)
+print("thanks for playing this game")
+
+#handeling different exceptions
+try: #to try this code
+   a= int(input("enter your number"))
+   c=1/a
+   print(c)
+except ValueError as e:  #to except that iteratin , and run our code further
+  print("please enter a valid value") #"value error ocur when wrong value is entere"
+  print(e)   #it does not throw error it only print error , and its optional
+except ZeroDivisionError as e: #this error occur when 0 is entered
+  print("make sure you are not dividing by 0")
+  print(e)
+print("thanks for using this code")
+
+#rasing custom error
+def increment(num):
+  try:
+      return int(num)+1
+  except:
+     raise ValueError("this is not good")  #here custom message is given
+a= increment(34)  #if we give any other type of input other than int then it goes to except
+print(a)
+
+#try with else clause
+try:
+    i=int(input("enter a number "))
+    c=1/i
+except Exception as e:
+   print(e)
+else:   #it runs when there is no error in program our try does't go to except, i.t try runs without any hasel 
+   print("we were sucessfull")   
+   
+#try with finally clause
+try:
+    i=int(input("enter a number "))
+    c=1/i
+except Exception as e:
+   print(e)
+   exit() #if finally is not used then program ends here , but due to finally it still runs
+finally:  # it runs irespective of except, print doesnt do its work because if we give some wrong input and program goes to except and then exit  
+   print("finally we are done")   
+print("thanks for using the program")# it does't run because in except our program is already existed
