@@ -1,0 +1,35 @@
+#if ...name==main...  #it work as entry point
+def greet(name):
+   print(f"good morning {name}")
+#print(__name__)  #it print value pf function when running fromsame file , and when from other it print name of orignal fille where function is present    
+if __name__=="__main__": #when we want to use a function in different different files #when we are runing from same file its value is main , and when we are running from somewhere else then it runs greet function only 
+   n=input("enter your name")
+   greet(n)
+   
+   #GLOBAL KEYWORD
+a=54 #global variable
+def func1():
+  # global a  # it changes value of global a
+   print(f"print statment 1: {a}")
+   a=8  #local variable
+   print(f"print statment 2: {a}")
+func1()#it gave 8 as value of a
+print(f"print statment 3: {a}")#it gave 54 as value of a
+
+#enumerate function 
+list1=[3, 5,"rohan",6.2, False]
+
+for index, item in enumerate(list1): #to print index of items too  and sequence is fixed here i.e  "index,item"
+   print(item,index)   #here we can change sequence
+   
+#list comprehension 
+a=[3,4,6,8,9,23,45,67,54,72,35]
+'''normal way
+b=[] 
+for item in a:
+   if a%2==0:
+      b.append(item)
+print(b)'''
+#shortcut to write the same
+b=[i for i in a if i%2==0]  #it print all values which are divisible by 2
+print(b)
