@@ -1,0 +1,11 @@
+#comands 
+pip install vertualenv 
+
+virtualenv myprojectenv
+Set-ExecutionPolicy Unrestricted 
+myprojectenv\Scripts\activate.ps1  
+pip install library/module name (pandas, flask)
+deactivate-
+pip freeze- 
+pip freeze> requirments.txt(file name)
+pip install - r requirments.txt(file name)  
