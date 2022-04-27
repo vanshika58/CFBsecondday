@@ -1,0 +1,20 @@
+
+#lamda functions
+#def func(a): #normal way
+   #return a+5
+'''func= lambda a: a+5  #by using lambda function
+sum= lambda a,b,c : a+b+c
+x=566
+print(func(x))
+print(sum(3,2,4))'''
+#join methods
+'''l=["camera", "laptop","graphic card","1234"]
+sentence= " and ".join(l)   #here and comes between components of list
+sentence= "\n ".join(l)     #here \n i.t a line changed after each component of list
+print(sentence)'''
+#formate method
+name = "Harry"
+channel= " coding"
+#a = f"this is {name}"
+a= "this is {1} an his channel is {0}".formate(name, channel )  #"{}"inside this bracket we put index of argument and if we do not put number then flow goes sequentially
+print(a)
