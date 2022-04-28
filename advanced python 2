@@ -1,0 +1,43 @@
+#filter 
+'''def greater_5(num) :
+    if num>5:
+        return True
+    else:
+        return False
+g10= lambda num: num>10
+l=[1,2,3,14,5,4,6,78]
+print(list(filter(greater_5,l)))
+print(list(filter(g10,l)))'''
+
+#reduce
+'''from functools import reduce
+sum=lambda a,b: a+b
+l=[1,2,3,4,5,6]
+val= reduce(sum,l)
+print(val)'''
+
+#program to take input and formate it
+'''from tempfile import template
+name= input ("enter your name  ")
+marks= int (input ("enter your marks  "))
+number= input ("enter your phone number  ")
+template= "the name of the student is {}, his marks are{} and phone number is {}"
+output = template.format(name,marks,number)
+print(output)'''
+
+#cover a list to conver verticaly a list
+'''l=[str(i*7) for i in range(1,11)]  #make content a string 
+print(l)
+verticaltable= "\n".join(l)
+print(verticaltable)'''
+
+#appling filter function to filter numbers divisible by 5
+'''l=[1,2,3,4,15,5,10,25,34,45,40]
+a= filter(lambda a: a%5 == 0,l)
+print(list(a))'''
+
+#find maximum of a number using reduced function
+'''from functools import reduce
+l=[1,6,8,9,5]
+a= reduce(max,l)  #reduce take sequentialy 2 number and then with next one acc to function
+print(a)'''
